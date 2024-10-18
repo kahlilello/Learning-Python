@@ -3,4 +3,16 @@ LeetCode 75 - Python
 # Array/String
 
 # 1076 - Merge Strings Alternately - Easy
-
+   def mergeAlternately(self, word1: str, word2: str) -> str:
+          final = ''
+          
+          for i in range(min(len(word1), len(word2))):
+              final += word1[i] + word2[i]
+  
+          if len(word1) > len(word2):
+              final += word1[len(word2)::]
+          
+          elif len(word1) < len(word2):
+              final += word2[len(word1)::]
+  
+          return(final)
