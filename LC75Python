@@ -31,6 +31,9 @@ LeetCode 75 - Python
            gcd_len = a
    
            gcd_str = str1[:a]
+
+   # 1431. Kids With the Greatest Number of Candies
+      
            
            if str1 == gcd_str * (len(str1)//gcd_len) and str2 == gcd_str * (len(str2) // gcd_len):
                return gcd_str
