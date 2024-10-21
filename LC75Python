@@ -46,7 +46,14 @@ LeetCode 75 - Python
            return candies
 
    # 605. Can Place Flowers
-
+def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+        copybed = flowerbed
+        avail = 0
+        for i in range(len(flowerbed)):
+            if copybed[i] == 0 and (i == 0 or copybed[i-1] == 0) and (i == len(copybed) - 1 or copybed[i+1] ==0):
+                copybed[i] = 1
+                avail += 1
+        return avail >= n
 
 
 
