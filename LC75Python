@@ -56,7 +56,24 @@ LeetCode 75 - Python
             return avail >= n
 
    # 345. Reverse Vowels of a String
-
+def reverseVowels(self, s: str) -> str:
+        vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+        letters = []
+        for i in s:
+            if i in vowels:
+                letters.append(i)
+        
+        reverse = letters[::-1]
+        index = 0
+        final = []
+        for i in list(s):
+            if i in vowels:
+                final.append(reverse[index])
+                index += 1
+            else:
+                final.append(i)
+        
+        return ''.join(final)
 
 
 
