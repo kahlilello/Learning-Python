@@ -85,11 +85,11 @@ LeetCode 75 - Python
            """
            Do not return anything, modify nums in-place instead.
            """
-           
            for i in nums:
                if i == 0:
                    nums.remove(i)
                    nums.append(i)
+
 
          # 283. Move Zeroes - Using Pointers:
             def moveZeroes(self, nums: List[int]) -> None:
