@@ -101,6 +101,9 @@ LeetCode 75 - Python
                   if nums[current] !=0:
                       nums[last], nums[current] = nums[current], nums[last]
                       last += 1
+
+   # 392. Is Subsequence
+
         
 
 
