@@ -183,6 +183,15 @@ LeetCode 75 - Python
         return answer
 
    # 1207. Unique Number of Occurrences
+      def uniqueOccurrences(self, arr: List[int]) -> bool:
+        cnt = {}
+        for num in arr:
+            if num in cnt:
+                cnt[num] += 1
+
+            else:
+                cnt[num] = 1
+        return len(list(cnt.values())) == len(set(list(cnt.values())))
       
 
 
