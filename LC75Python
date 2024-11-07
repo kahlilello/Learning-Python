@@ -192,8 +192,23 @@ LeetCode 75 - Python
             else:
                 cnt[num] = 1
         return len(list(cnt.values())) == len(set(list(cnt.values())))
-      
 
+
+
+# Linked List
+
+## Easy
+   # 206. Reverse Linked List 
+         def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+           prev = None
+           curr = head
+           while curr != None:
+               next_temp = curr.next
+               curr.next = prev
+               prev = curr
+               curr = next_temp
+           head = prev
+           return head
 
 
 
