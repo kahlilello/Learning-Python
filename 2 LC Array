@@ -19,3 +19,19 @@
                               return [searched[complement], i]
                           searched[nums[i]] = i
                           i += 1
+
+  # 27 Remove Element
+      def removeElement(self, nums: List[int], val: int) -> int:
+        x, y = 0, 0
+        while y < len(nums):
+            if nums[y] != val:
+                nums[x], nums[y] = nums[y], nums[x]
+                x += 1
+            y += 1
+
+        i = 0
+        while i < len(nums):
+            if nums[i] == val:
+                nums.remove(nums[i])
+            else:
+                i += 1
