@@ -47,5 +47,15 @@
                 return k
 
   # 169 Majority Element
+    def majorityElement(self, nums: List[int]) -> int:
+        cnt = {}
+        for i in nums:
+            if i in cnt:
+                cnt[i] += 1
+            else:
+                cnt[i] = 1
+        for key, count in cnt.items():
+            if count > (len(nums)/2):
+                return key
 
 
