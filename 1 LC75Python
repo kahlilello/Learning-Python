@@ -215,6 +215,19 @@ LeetCode 75 - Python
 
 ## Easy
    # 374. Guess Number Higher or Lower
+         def guessNumber(self, n: int) -> int:
+           l, r = 0, n
+   
+           while l <=r:
+               m = (l+r) //2
+               check = guess(m)
+               if check == (-1):
+                   r = m -1
+               elif check == 1:
+                   l = m + 1
+               else:
+                   return m
+
 
 
 
