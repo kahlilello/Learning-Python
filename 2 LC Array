@@ -58,4 +58,20 @@
             if count > (len(nums)/2):
                 return key
 
+  # 121 Best Time to Buy and Sell Stock
+    def maxProfit(self, prices: List[int]) -> int:
+        max_profit = 0
+        left, right = 0, 1
+        while right < len(prices):
+            current_profit = prices[right] - prices[left]
+            if prices[left] < prices[right]:
+                max_profit = max(max_profit, current_profit)
+            else:
+                left = right
+            right += 1
+        return max_profit
+
+
+
+
 
