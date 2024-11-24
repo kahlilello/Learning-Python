@@ -1,0 +1,14 @@
+# Leet Code Problems - String
+
+## Easy
+
+  # 258. Add Digits
+    def addDigits(self, num: int) -> int:
+        
+        while len(str(num)) > 1:
+            total_sum = 0
+            for i in str(num):
+                total_sum += int(i)
+            num = total_sum
+
+        return num
