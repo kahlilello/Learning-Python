@@ -12,3 +12,6 @@
             num = total_sum
 
         return num
+
+  # 66. Plus One
+
