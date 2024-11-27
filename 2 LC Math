@@ -14,4 +14,8 @@
         return num
 
   # 66. Plus One
+    def plusOne(self, digits: List[int]) -> List[int]:
+        digits2 = int(''.join(map(str, digits))) + 1
+        return list(map(int, str(digits2)))
+
 
