@@ -5,3 +5,10 @@
   # 58. Length of Last Word
       def lengthOfLastWord(self, s: str) -> int:
         return len(s.split()[-1])
+
+  # 28. Find the Index of the First Occurrence in a String (100%)
+      def strStr(self, haystack: str, needle: str) -> int:
+        for i in range(len(haystack)):
+            if haystack[i: i+len(needle)] == needle:
+                return i
+        return -1
