@@ -23,4 +23,9 @@
         # Write your code here
         return ''.join('A' if c == 'B' else 'B' for c in C)
 
+# Battleship
+  def getHitProbability(R: int, C: int, G: List[List[int]]) -> float:
+    # Write your code here
+    return sum(sum(i) for i in G)/(R*C)
+
 
