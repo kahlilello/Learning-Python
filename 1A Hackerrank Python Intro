@@ -74,4 +74,13 @@
                             # Write your logic here
                             return ((year %4 ==0) and (year % 100 != 0 or year%400 == 0))
 
+# Print Function
+
+            if __name__ == '__main__':
+                n = int(input())
+                nstr = ''
+                for i in range(1, n + 1):
+                    nstr += str(i)
+                print(nstr)
+
             
