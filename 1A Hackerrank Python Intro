@@ -87,11 +87,8 @@
             if __name__ == '__main__':
                 n = int(input())
                 arr = map(int, input().split())
-                
-                # Find the maximum value and store the map values in a list 
-                
+                # Convert arr to list
                 arr_list = list(arr) 
-                
-                
+                # Find the max of a list created from filtering out the max of the initial list
                 print(max([num for num in arr_list if num != max(arr_list)]))
 
