@@ -84,4 +84,14 @@
                 print(nstr)
 
 # Find the Runner-up Score!
+            if __name__ == '__main__':
+                n = int(input())
+                arr = map(int, input().split())
+                
+                # Find the maximum value and store the map values in a list 
+                
+                arr_list = list(arr) 
+                
+                
+                print(max([num for num in arr_list if num != max(arr_list)]))
 
