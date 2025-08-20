@@ -26,3 +26,13 @@ def find_it(seq):
         oddnum = current
     
     return oddnum
+
+
+
+        XOR Soln:
+            def find_it(seq):
+                result = 0
+                for n in seq:
+                    result ^= n
+                
+                return result
