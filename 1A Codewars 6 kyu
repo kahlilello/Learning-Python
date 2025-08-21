@@ -1,4 +1,21 @@
 
+//// Training on Multoples of 3 or 5
+def solution(number):
+    i = 0
+    multiples = []
+    while i < number:
+        if i % 3 == 0 or i%5 == 0:
+            multiples.append(i)
+        i+=1
+    
+    
+    return sum(multiples)
+
+
+
+
+
+
 
 /// for CSE 6040 - Finding the odd int
 
