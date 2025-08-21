@@ -1,4 +1,26 @@
 
+
+
+
+///// Training on Rectangle into Squares
+def sq_in_rect(lng, wdth):
+    # your code
+    if lng == wdth:
+        return None
+    squares = []
+    while lng > 0 and wdth > 0:
+        if lng > wdth:
+            squares.append(wdth)
+            lng -= wdth
+        else:
+            squares.append(lng)
+            wdth -= lng
+    
+    return squares
+
+
+
+
 //// Training on Multoples of 3 or 5
 def solution(number):
     i = 0
