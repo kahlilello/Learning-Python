@@ -25,8 +25,7 @@ def bouncing_ball(h, bounce, window):
 
 
 
-
-///// Rectangle into Squares
+######### Rectangle into Squares
 def sq_in_rect(lng, wdth):
     # your code
     if lng == wdth:
@@ -45,7 +44,7 @@ def sq_in_rect(lng, wdth):
 
 
 
-//// Multoples of 3 or 5
+######### Multoples of 3 or 5
 def solution(number):
     i = 0
     multiples = []
@@ -63,7 +62,7 @@ def solution(number):
 
 
 
-/// for CSE 6040 - Finding the odd int
+######### for CSE 6040 - Finding the odd int
 
 def find_it(seq):
     
