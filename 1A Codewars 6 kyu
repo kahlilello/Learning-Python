@@ -7,22 +7,20 @@ def tick_toward(start, target):
     
     while current[0] != target[0] or current[1] != target[1]:
         
-        if (target[0]-current[0]) != 0:
-            a = ((target[0]-current[0])/(target[0]-current[0]))
-        else:
-            a = 0
+        a = 0
+        b = 0
+        
+        if (target[0]-current[0]) > 0:
+            a = 1
+        if (target[0]-current[0]) < 0:
+            a = -1
             
-        if  (target[1]-current[1]) != 0:
-             b = ((target[1]-current[1])/(target[1]-current[1]))
-        else:
-            b = 0
-        
-        
-        new = (current[0] + a,  current[1] +  b)   
-        
-        
-        
-        
+        if (target[1]-current[1]) > 0:
+            b = 1
+        if (target[1]-current[1]) < 0:
+            b = -1
+            
+        new = (current[0] + a, current[1] + b)
                 
         lst.append(new)
         current = new
@@ -30,7 +28,6 @@ def tick_toward(start, target):
     #lst.append(target)
     
     return lst
-
 
 
 
