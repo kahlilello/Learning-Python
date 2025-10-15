@@ -163,4 +163,38 @@ def to_weird_case(words):
     
     
     return new
+
+
+
+
+
+############## Help the bookseller!
+
+def stock_list(stocklist, categories):
+    # your code here
     
+    
+    if len(stocklist) == 0 or len(categories) ==0:
+        return ''
+    
+    
+    
+    cnt_dict = {}
+    
+    for category in categories:
+        cnt_dict[category] = 0
+        
+    for stock in stocklist:
+        if stock[0] in categories:
+            splitted = stock.split(' ')
+            cnt_dict[splitted[0][0]] += int(splitted[1])
+    
+    stocks = ''
+    for key,value in cnt_dict.items():
+        if stocks == '':
+            stocks += '(' + key + ' : ' + str(value) + ')'
+        else:
+            stocks += ' - (' + key + ' : ' + str(value) + ')'
+        
+    
+    return stocks
