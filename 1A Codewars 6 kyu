@@ -204,3 +204,26 @@ def stock_list(stocklist, categories):
 
 
 ############ Perfect Square 
+
+
+
+def perfect_square(square):
+    
+    lst = square.split('\n')
+    
+    cnt = []
+    
+    for l in lst:
+        length = 0
+        for i in l:
+            if i == '.':
+                length += 1
+        
+        if length > 0:
+        
+            cnt.append(length)
+    
+    
+    
+    # cnt == sorted(cnt) and 
+    return cnt == sorted(cnt) and len((cnt))
