@@ -227,3 +227,25 @@ def perfect_square(square):
     
     # cnt == sorted(cnt) and 
     return cnt == sorted(cnt) and len((cnt))
+
+
+
+def perfect_square(square):
+    
+    lst = square.split('\n')
+    
+    cnt = []
+    length = 0
+    for dot in square:
+        
+        if dot == '.':
+            length += 1:
+        elif dot != '.' and length > 0:
+            cnt.append(length)
+            length = 0
+        
+    
+    
+    
+    # cnt == sorted(cnt) and 
+    return cnt == sorted(cnt) and len((cnt)) > 0
