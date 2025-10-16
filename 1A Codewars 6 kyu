@@ -234,13 +234,22 @@ def perfect_square(square):
     
     cnt = []
     length = 0
+    prev = ''
     for dot in square:
         
         if dot == '.':
             length += 1
-        elif dot != '.' and length > 0:
+            prev = '.'
+        if dot != '.' and length > 0:
             cnt.append(length)
+            prev = '.'
             length = 0
+        if dot == '\n' and (len(cnt) == 0 or prev == '\n'):
+            prev = '\n'
+            cnt.append(0)
+            
+        
+        
             
     if length > 0:
         cnt.append(length)
@@ -250,4 +259,4 @@ def perfect_square(square):
     
     
     # cnt == sorted(cnt) and 
-    return cnt # == sorted(cnt) and len((cnt)) > 0 and cnt[0] == len(cnt)
+    return cnt == sorted(cnt) and len((cnt)) > 0 and cnt[0] == len(cnt)
