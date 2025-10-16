@@ -228,7 +228,6 @@ def perfect_square(square):
     # cnt == sorted(cnt) and 
     return cnt == sorted(cnt) and len((cnt))
 
-
 def perfect_square(square):
     
     lst = square.split('\n')
@@ -242,9 +241,13 @@ def perfect_square(square):
         elif dot != '.' and length > 0:
             cnt.append(length)
             length = 0
+            
+    if length > 0:
+        cnt.append(length)
+        length = 0
         
     
     
     
     # cnt == sorted(cnt) and 
-    return cnt == sorted(cnt) and len((cnt)) > 0 and cnt[0] == len(cnt)
+    return cnt # == sorted(cnt) and len((cnt)) > 0 and cnt[0] == len(cnt)
