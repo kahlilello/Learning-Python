@@ -198,3 +198,9 @@ def stock_list(stocklist, categories):
         
     
     return stocks
+
+
+
+
+
+############ Perfect Square 
