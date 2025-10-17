@@ -13,3 +13,8 @@ def open_or_senior(data):
     return cat
 
 
+
+## List Comprehension version
+def open_or_senior(data):
+    return ['Senior' if player[0] > 54 and player[1] > 7  else 'Open' for player in data]
+
