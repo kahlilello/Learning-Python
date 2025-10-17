@@ -1,0 +1,15 @@
+########### Categorize New Members
+def open_or_senior(data):
+    
+    cat = []
+    
+    for player in data:
+        if player[0] > 54 and player[1] > 7:
+            cat.append('Senior')
+            
+        else:
+            cat.append('Open')
+            
+    return cat
+
+
