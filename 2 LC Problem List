@@ -1,0 +1,30 @@
+
+
+
+
+#### Easy
+
+
+## 35. Search Insert Position
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        prev = min(nums)
+        if prev > target:
+            return 0
+        if max(nums) < target:
+            return len(nums)
+
+        for idx, num in enumerate(nums):
+            if num == target:
+                return idx
+            if prev < target and target < num:
+                return idx
+            prev = num
+        
+
+
+
+
+
+
+
