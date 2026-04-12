@@ -2,6 +2,10 @@ LeetCode 75 - Python
 
 # Array/String
 
+
+
+
+##################### 11APR RESTART
 ## Easy
    # 1076. Merge Strings Alternately
       def mergeAlternately(self, word1: str, word2: str) -> str:
