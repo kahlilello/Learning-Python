@@ -17,6 +17,25 @@ LeetCode 75 - Python
                  final += word2[len(word1)::]
      
              return(final)
+
+
+            # 11APR2026:
+               def mergeAlternately(self, word1: str, word2: str) -> str:
+                    merged = ''
+                    
+                    
+                    shortest = min(len(word1), len(word2))
+            
+                    for i in range(shortest):
+                        merged += word1[i] + word2[i] 
+                    
+                    merged += (word1[shortest:] if len(word1) > len(word2) else word2[shortest:])
+            
+                    return merged
+                    
+
+
+               
    
    # 1071. Greatest Common Divisor of Strings
        def gcdOfStrings(self, str1: str, str2: str) -> str:
