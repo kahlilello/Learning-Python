@@ -16,6 +16,31 @@ LeetCode 75 - Python
 
 
 
+   # 1071. Greatest Common Divisor of Strings
+       def gcdOfStrings(self, str1: str, str2: str) -> str:
+           gcd = ''
+           shortest = min(len(str1), len(str2))
+   
+           if str1 + str2 != str2 + str1:
+               return gcd
+   
+           result = ''
+   
+           for i in range(shortest):
+   
+               
+               
+               if str1[i] == str2[i]:
+                   gcd += str1[i]
+               
+               if (str1 == gcd * (len(str1) // len(gcd))) and (str2 == gcd * (len(str2) // len(gcd))):
+                   result = gcd
+           
+           
+   
+           
+           return result
+
 
 
 
