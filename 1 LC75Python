@@ -50,6 +50,17 @@ LeetCode 75 - Python
                        
                        return str1[:a]
 
+   # 1431. Kids With the Greatest Number of Candies
+       def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+           originalMax = max(candies)
+   
+           new_candies = [(candy + extraCandies) >= originalMax for candy in candies]
+   
+           return new_candies
+           
+
+   
+
 
 
 
