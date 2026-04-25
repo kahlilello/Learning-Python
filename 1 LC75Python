@@ -57,6 +57,27 @@ LeetCode 75 - Python
            new_candies = [(candy + extraCandies) >= originalMax for candy in candies]
    
            return new_candies
+
+
+   # 605. Can Place Flowers
+         def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+                 freeplots = 0
+                 bed2 = flowerbed.copy()
+                 for idx, flower in enumerate(flowerbed):
+                     if idx == 0:
+                         if flower == 0 and bed2[min(idx + 1, len(flowerbed) - 1)] == 0:
+                             bed2[idx] = 1
+                             freeplots += 1
+                     if idx == len(flowerbed) - 1:
+                         if flower == 0 and bed2[idx - 1] == 0:
+                             bed2[idx] = 1
+                             freeplots += 1
+                     if idx > 0 and idx < len(flowerbed) - 1:
+                         if flower == 0 and bed2[idx - 1] == 0 and bed2[idx + 1] == 0:
+                             bed2[idx] = 1
+                             freeplots += 1
+
+                 return freeplots >= n
            
 
    
