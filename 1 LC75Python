@@ -78,6 +78,30 @@ LeetCode 75 - Python
                              freeplots += 1
 
                  return freeplots >= n
+
+   # 345. Reverse Vowels of String
+         def reverseVowels(self, s: str) -> str:
+           vowels = 'aeiouAEIOU'
+           vows = []
+           idxs = []
+   
+           s2 = list(s)
+   
+           for idx, letter in enumerate(s2):
+               if letter in vowels:
+                   vows.append(letter)
+                   idxs.append(idx)
+           curr = 0
+           idxs.reverse()
+   
+           for i in idxs:
+               s2[i] = vows[curr]
+               curr += 1
+               
+       
+   
+           
+           return ''.join(s2)
            
 
    
