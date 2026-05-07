@@ -108,6 +108,9 @@ LeetCode 75 - Python
 
 
 # Two Pointers
+
+
+   ## 283. Move Zeroes
    def moveZeroes(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
@@ -122,6 +125,26 @@ LeetCode 75 - Python
             if num != 0 and curr != idx and nums[curr] == 0:
                 nums[curr], nums[idx] = nums[idx], 0
                 curr += 1
+
+
+            ## Double
+               def moveZeroes(self, nums: List[int]) -> None:
+                    """
+                    Do not return anything, modify nums in-place instead.
+                    """
+                    curr = 0
+            
+                    for idx, num in enumerate(nums):
+                        
+                        if num != 0:
+                            nums[curr], nums[idx] = nums[idx], nums[curr]
+                            curr += 1
+        
+
+
+
+
+         
         
 
 
