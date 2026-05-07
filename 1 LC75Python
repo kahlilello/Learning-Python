@@ -4,8 +4,9 @@ LeetCode 75 - Python
 #### ============= Array/String
 #### ==============================
 
-
+   ## -----------------------------
    ## Array/String - EASY 
+   ## -----------------------------
 
          # 1076. Merge Strings Alternatively
             def mergeAlternately(self, word1: str, word2: str) -> str:
@@ -117,8 +118,9 @@ LeetCode 75 - Python
 #### ==============================
 
 
-
-   ### Two Pointers - EASY
+   ## -----------------------------
+   ## Two Pointers - EASY
+   ## -----------------------------
 
          ## 283. Move Zeroes
          def moveZeroes(self, nums: List[int]) -> None:
