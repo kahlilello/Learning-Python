@@ -1,145 +1,149 @@
 LeetCode 75 - Python 
 
-# Array/String
+###### Array/String
 
-   # 1076. Merge Strings Alternatively
-      def mergeAlternately(self, word1: str, word2: str) -> str:
+   ## Array/String - EASY 
 
-        
-        shortest = min(len(word1), len(word2))
-
-        merged = ''.join(word1[i] + word2[i] for i in range(shortest))
-
-        merged += (word1[shortest:] if len(word1) > len(word2) else word2[shortest:])
-
-        return merged
-
-
-
-   # 1071. Greatest Common Divisor of Strings
-       def gcdOfStrings(self, str1: str, str2: str) -> str:
-           gcd = ''
-           shortest = min(len(str1), len(str2))
-   
-           if str1 + str2 != str2 + str1:
-               return gcd
-   
-           result = ''
-   
-           for i in range(shortest):
-
-               if str1[i] == str2[i]:
-                   gcd += str1[i]
-               
-               if (str1 == gcd * (len(str1) // len(gcd))) and (str2 == gcd * (len(str2) // len(gcd))):
-                   result = gcd
-
-           return result
-
-
-
-         ### v2 - using Euclid's algorithm
-               def gcdOfStrings(self, str1: str, str2: str) -> str:
-                       if str1 + str2 != str2 + str1:
-                           return ''
-               
-                       a, b = len(str1), len(str2)
-               
-                       while b:
-                           a, b = b, a%b
-                       
-                       return str1[:a]
-
-   # 1431. Kids With the Greatest Number of Candies
-       def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-           originalMax = max(candies)
-   
-           new_candies = [(candy + extraCandies) >= originalMax for candy in candies]
-   
-           return new_candies
-
-
-   # 605. Can Place Flowers
-         def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
-                 freeplots = 0
-                 bed2 = flowerbed.copy()
-                 for idx, flower in enumerate(flowerbed):
-                     if idx == 0:
-                         if flower == 0 and bed2[min(idx + 1, len(flowerbed) - 1)] == 0:
-                             bed2[idx] = 1
-                             freeplots += 1
-                     if idx == len(flowerbed) - 1:
-                         if flower == 0 and bed2[idx - 1] == 0:
-                             bed2[idx] = 1
-                             freeplots += 1
-                     if idx > 0 and idx < len(flowerbed) - 1:
-                         if flower == 0 and bed2[idx - 1] == 0 and bed2[idx + 1] == 0:
-                             bed2[idx] = 1
-                             freeplots += 1
-
-                 return freeplots >= n
-
-   # 345. Reverse Vowels of String
-         def reverseVowels(self, s: str) -> str:
-           vowels = 'aeiouAEIOU'
-           vows = []
-           idxs = []
-   
-           s2 = list(s)
-   
-           for idx, letter in enumerate(s2):
-               if letter in vowels:
-                   vows.append(letter)
-                   idxs.append(idx)
-           curr = 0
-           idxs.reverse()
-   
-           for i in idxs:
-               s2[i] = vows[curr]
-               curr += 1
-               
-       
-   
-           
-           return ''.join(s2)
-
-
-
-
-
-# Two Pointers
+         # 1076. Merge Strings Alternatively
+            def mergeAlternately(self, word1: str, word2: str) -> str:
+      
+              
+              shortest = min(len(word1), len(word2))
+      
+              merged = ''.join(word1[i] + word2[i] for i in range(shortest))
+      
+              merged += (word1[shortest:] if len(word1) > len(word2) else word2[shortest:])
+      
+              return merged
+      
+      
+      
+         # 1071. Greatest Common Divisor of Strings
+             def gcdOfStrings(self, str1: str, str2: str) -> str:
+                 gcd = ''
+                 shortest = min(len(str1), len(str2))
+         
+                 if str1 + str2 != str2 + str1:
+                     return gcd
+         
+                 result = ''
+         
+                 for i in range(shortest):
+      
+                     if str1[i] == str2[i]:
+                         gcd += str1[i]
+                     
+                     if (str1 == gcd * (len(str1) // len(gcd))) and (str2 == gcd * (len(str2) // len(gcd))):
+                         result = gcd
+      
+                 return result
+      
+      
+      
+               ### v2 - using Euclid's algorithm
+                     def gcdOfStrings(self, str1: str, str2: str) -> str:
+                             if str1 + str2 != str2 + str1:
+                                 return ''
+                     
+                             a, b = len(str1), len(str2)
+                     
+                             while b:
+                                 a, b = b, a%b
+                             
+                             return str1[:a]
+      
+         # 1431. Kids With the Greatest Number of Candies
+             def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+                 originalMax = max(candies)
+         
+                 new_candies = [(candy + extraCandies) >= originalMax for candy in candies]
+         
+                 return new_candies
+      
+      
+         # 605. Can Place Flowers
+               def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+                       freeplots = 0
+                       bed2 = flowerbed.copy()
+                       for idx, flower in enumerate(flowerbed):
+                           if idx == 0:
+                               if flower == 0 and bed2[min(idx + 1, len(flowerbed) - 1)] == 0:
+                                   bed2[idx] = 1
+                                   freeplots += 1
+                           if idx == len(flowerbed) - 1:
+                               if flower == 0 and bed2[idx - 1] == 0:
+                                   bed2[idx] = 1
+                                   freeplots += 1
+                           if idx > 0 and idx < len(flowerbed) - 1:
+                               if flower == 0 and bed2[idx - 1] == 0 and bed2[idx + 1] == 0:
+                                   bed2[idx] = 1
+                                   freeplots += 1
+      
+                       return freeplots >= n
+      
+         # 345. Reverse Vowels of String
+               def reverseVowels(self, s: str) -> str:
+                 vowels = 'aeiouAEIOU'
+                 vows = []
+                 idxs = []
+         
+                 s2 = list(s)
+         
+                 for idx, letter in enumerate(s2):
+                     if letter in vowels:
+                         vows.append(letter)
+                         idxs.append(idx)
+                 curr = 0
+                 idxs.reverse()
+         
+                 for i in idxs:
+                     s2[i] = vows[curr]
+                     curr += 1
+                     
+             
+         
+                 
+                 return ''.join(s2)
 
 
-   ## 283. Move Zeroes
-   def moveZeroes(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        curr = 0
-
-        for idx, num in enumerate(nums):
-            
-            if nums[curr] != 0 and num == 0:
-                curr = idx
-
-            if num != 0 and curr != idx and nums[curr] == 0:
-                nums[curr], nums[idx] = nums[idx], 0
-                curr += 1
 
 
-            ## v2 -- making it easy
 
-               def moveZeroes(self, nums: List[int]) -> None:
-                    """
-                    Do not return anything, modify nums in-place instead.
-                    """
-                    curr = 0
-            
-                    for idx, num in enumerate(nums):
-                        
-                        if num != 0:
-                            nums[curr], nums[idx] = nums[idx], nums[curr]
-                            curr += 1
+#### Two Pointers
+
+
+   ### Two Pointers - EASY
+
+         ## 283. Move Zeroes
+         def moveZeroes(self, nums: List[int]) -> None:
+              """
+              Do not return anything, modify nums in-place instead.
+              """
+              curr = 0
+      
+              for idx, num in enumerate(nums):
+                  
+                  if nums[curr] != 0 and num == 0:
+                      curr = idx
+      
+                  if num != 0 and curr != idx and nums[curr] == 0:
+                      nums[curr], nums[idx] = nums[idx], 0
+                      curr += 1
+      
+      
+                  ## v2 -- making it easy
+      
+                     def moveZeroes(self, nums: List[int]) -> None:
+                          """
+                          Do not return anything, modify nums in-place instead.
+                          """
+                          curr = 0
+                  
+                          for idx, num in enumerate(nums):
+                              
+                              if num != 0:
+                                  nums[curr], nums[idx] = nums[idx], nums[curr]
+                                  curr += 1
         
 
 
