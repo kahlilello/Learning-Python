@@ -127,7 +127,8 @@ LeetCode 75 - Python
                 curr += 1
 
 
-            ## Double
+            ## v2 -- making it easy
+
                def moveZeroes(self, nums: List[int]) -> None:
                     """
                     Do not return anything, modify nums in-place instead.
