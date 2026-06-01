@@ -152,6 +152,9 @@ LeetCode 75 - Python
                               if num != 0:
                                   nums[curr], nums[idx] = nums[idx], nums[curr]
                                   curr += 1
+
+         ## 392. Is Subsequence
+
         
 
 
