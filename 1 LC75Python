@@ -153,7 +153,18 @@ LeetCode 75 - Python
                                   nums[curr], nums[idx] = nums[idx], nums[curr]
                                   curr += 1
 
-         ## 392. Is Subsequence
+         ## 392. Is Subsequence (Runtime 100 | Memory 91.63%)
+            def isSubsequence(self, s: str, t: str) -> bool:
+              s_check =''
+              index = 0
+      
+              for i in t:
+                  if len(s) > index and i == s[index]:
+                      s_check += i
+                      index += 1
+              
+              return s_check == s
+
 
         
 
